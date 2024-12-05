@@ -60,11 +60,15 @@ export default function UserRoutes(app) {
 
     const signin = async (req, res) => {
         const { username, password } = req.body;
+
         const currentUser = await dao.findUserByCredentials(username, password);
+
         if (currentUser) {
             req.session["currentUser"] = currentUser;
+            console.log("Signin Current User: ", currentUser)
             res.json(currentUser);
         } else {
+            console.log("Current User Not Set")
             res.status(401).json({ message: "Unable to login. Try again later." });
         }
     };
@@ -76,7 +80,11 @@ export default function UserRoutes(app) {
 
     const profile = async (req, res) => {
         const currentUser = req.session["currentUser"];
+
+        console.log("Profile Current User: ", currentUser)
+
         if (!currentUser) {
+            console.log("Profile CurrentUser undefined")
             res.sendStatus(401);
             return;
         }
