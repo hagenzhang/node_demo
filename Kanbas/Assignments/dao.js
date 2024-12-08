@@ -1,6 +1,5 @@
 import model from "./model.js";
 
-
 export function getAssignmentByID(assignmentID) {
     return model.find({ _id: assignmentID });
 }

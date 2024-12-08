@@ -5,7 +5,7 @@ export default [
         "course": "RS101"
     },
     {
-        "_id": "2",
+        _id: "2",
         "user": "234",
         "course": "RS101"
     },
