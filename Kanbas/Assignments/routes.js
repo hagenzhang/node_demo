@@ -1,6 +1,7 @@
-import * as assignmentsDao from "./dao.js";
+import * as dao from "./dao.js";
 
 export default function AssignmentRoutes(app) {
+    /*
     // create assignment
     app.post("/api/courses/:courseID/assignments"), async (req, res) => {
         const { courseID } = req.params;
@@ -30,4 +31,5 @@ export default function AssignmentRoutes(app) {
         const status = assignmentsDao.updateAssignment(assignmentID, assignmentUpdates);
         res.send(status);
     });
+    */
 }

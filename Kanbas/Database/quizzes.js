@@ -35,4 +35,44 @@ export default [
         availableDate: "2024-05-15T00:00",
         closeDate: "2025-05-16T23:59", // until date equivalent
     },
+    {
+        _id: "q1",
+        title: "Quiz A",
+        description: "A Very Quiz A Description Here",
+        courseNumber: "RS102",
+        quizType: quizType.PRACTICE,
+        points: 10,
+        assignmentGroup: quizGroup.ASSIGNMENTS,
+        shuffleAnswers: false,
+        timeLimitMin: 5,
+        maxAttempts: 3, // no multiple attempts boolean, just set this value
+        showCorrectAnswers: false,
+        accessCode: "test",
+        oneQuestionAtATime: false, // one question at a time
+        webcamRequired: false,
+        lockQuestionAfterAns: false,
+        dueDate: "2025-05-15T23:59",
+        availableDate: "2024-05-15T00:00",
+        closeDate: "2025-05-16T23:59", // until date equivalent
+    },
+    {
+        _id: "q2",
+        title: "Quiz B",
+        description: "A Very Quiz B Description Here",
+        courseNumber: "RS103",
+        quizType: quizType.EXAMS,
+        points: 100,
+        assignmentGroup: quizGroup.EXAMS,
+        shuffleAnswers: true,
+        timeLimitMin: 60,
+        maxAttempts: 1, // no multiple attempts boolean, just set this value
+        showCorrectAnswers: false,
+        accessCode: "exam1",
+        oneQuestionAtATime: true, // one question at a time
+        webcamRequired: true,
+        lockQuestionAfterAns: false,
+        dueDate: "2025-05-15T23:59",
+        availableDate: "2024-05-15T00:00",
+        closeDate: "2025-05-16T23:59", // until date equivalent
+    },
 ]
