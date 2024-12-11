@@ -11,6 +11,7 @@ import QuizzesRoutes from "./Kanbas/Quizzes/routes.js";
 import UserRoutes from "./Kanbas/Users/routes.js";
 
 const app = express()
+
 app.use(
     cors({
         credentials: true,
@@ -32,6 +33,10 @@ if (process.env.NODE_ENV !== "development") {
 }
 app.use(session(sessionOptions));
 app.use(express.json());
+
+app.get('/hello', (req, res) => {res.send('Life is good!')})
+app.get('/', (req, res) => {
+    res.send('Welcome to Full Stack Development!')})
 
 AssignmentRoutes(app);
 CourseRoutes(app);
