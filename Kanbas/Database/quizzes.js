@@ -22,7 +22,7 @@ export default [
         course: "RS101",
         quizType: quizType.GRADED,
         points: 100,
-        assignmentGroup: quizGroup.QUIZZES,
+        quizGroup: quizGroup.QUIZZES,
         shuffleAnswers: true,
         timeLimitMin: 20,
         maxAttempts: 1, // no multiple attempts boolean, just set this value
@@ -43,7 +43,7 @@ export default [
         course: "RS102",
         quizType: quizType.PRACTICE,
         points: 10,
-        assignmentGroup: quizGroup.ASSIGNMENTS,
+        quizGroup: quizGroup.ASSIGNMENTS,
         shuffleAnswers: false,
         timeLimitMin: 5,
         maxAttempts: 3, // no multiple attempts boolean, just set this value
@@ -64,7 +64,7 @@ export default [
         course: "RS103",
         quizType: quizType.EXAMS,
         points: 100,
-        assignmentGroup: quizGroup.EXAMS,
+        quizGroup: quizGroup.EXAMS,
         shuffleAnswers: true,
         timeLimitMin: 60,
         maxAttempts: 1, // no multiple attempts boolean, just set this value
@@ -85,7 +85,7 @@ export default [
         course: "RS101",
         quizType: quizType.GRADEDSURVEY,
         points: 50,
-        assignmentGroup: quizGroup.QUIZZES,
+        quizGroup: quizGroup.QUIZZES,
         shuffleAnswers: true,
         timeLimitMin: 60,
         maxAttempts: 1, // no multiple attempts boolean, just set this value
@@ -106,8 +106,8 @@ export default [
         course: "RS102",
         quizType: quizType.GRADED,
         points: 100,
-        assignmentGroup: quizGroup.QUIZZES,
-        shuffleAnswers: true,
+        quizGroup: quizGroup.QUIZZES,
+        shuffleAnswers: false,
         timeLimitMin: 20,
         maxAttempts: 1, // no multiple attempts boolean, just set this value
         showCorrectAnswers: false,
