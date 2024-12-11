@@ -1,21 +1,28 @@
-import db from "../Database/index.js";
-let { quizzes } = db;
+import Database from "../Database/index.js";
 
-export function findQuizByID(quizID) {
-    
+export function findQuizForCourse(quizId) {
+  const { quizzes } = Database;
+  return quizzes.filter((quiz) => quiz.course === quizId);
 }
-export function findQuizzesByCourse(courseID) {
 
+export function deleteQuiz(quizId) {
+    const { quizzes } = Database;
+    Database.quizzes = quizzes.filter((quiz) => quiz._id !== quizId);
 }
+   
 export function createQuiz(quiz) {
-
+    const {quizzes} = Database;
+    const newQuiz = { 
+        ...quiz, 
+        _id: Date.now().toString()
+    };
+    Database.quizzes = [...quizzes, newQuiz];
+    return newQuiz;
 }
-export function deleteQuiz(quizID) {
 
+export function updateQuiz(quizId, quizUpdates) {
+    const { quizzes } = Database;
+    const quiz = quizzes.find((quiz) => quiz._id === quizId);
+    Object.assign(quiz, quizUpdates);
+    return quiz;
 }
-export function updateQuiz(quizID, quizUpdates) {
-
-}
-
-
-

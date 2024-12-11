@@ -1,7 +1,7 @@
 import "dotenv/config";
-import express from 'express'
+import express from 'express';
 import session from "express-session";
-import cors from "cors"
+import cors from "cors";
 
 import AssignmentRoutes from "./Kanbas/Assignments/routes.js"
 import CourseRoutes from "./Kanbas/Courses/routes.js";
