@@ -42,7 +42,14 @@ export default function QuizzesRoutes(app) {
     app.put("/api/quizzes/:quizID", async (req, res) => {
         const { quizID } = req.params;
         const quizUpdates = req.body;
-        const status = dao.updateAssignment(quizID, quizUpdates);
+        const status = dao.updateQuiz(quizID, quizUpdates);
         res.sendStatus(status);
     });
+
+    // get the questions from a quiz
+    app.get("/api/quizzes/:quizID/questions"), async (req, res) => {
+        const { quizID } = req.params;
+        const questions = await dao.getQuizQuestions(quizID)
+        res.json(questions)
+    }
 }

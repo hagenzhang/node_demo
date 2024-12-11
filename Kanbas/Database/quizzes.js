@@ -21,7 +21,6 @@ export default [
         description: "A Very Default Description Here",
         course: "RS101",
         quizType: quizType.GRADED,
-        points: 100,
         quizGroup: quizGroup.QUIZZES,
         shuffleAnswers: true,
         timeLimitMin: 20,
@@ -35,6 +34,7 @@ export default [
         availableDate: "2024-05-15T00:00",
         closeDate: "2025-05-16T23:59", // until date equivalent
         published: true,
+        questionsID: "BmcY6WTnVr5q",
     },
     {
         _id: "ZG9X3KnVr5Aq",
@@ -42,7 +42,6 @@ export default [
         description: "A Very Quiz A Description Here",
         course: "RS102",
         quizType: quizType.PRACTICE,
-        points: 10,
         quizGroup: quizGroup.ASSIGNMENTS,
         shuffleAnswers: false,
         timeLimitMin: 5,
@@ -56,6 +55,7 @@ export default [
         availableDate: "2024-05-15T00:00",
         closeDate: "2025-05-16T23:59", // until date equivalent
         published: true,
+        questionsID: "BmcY6WTnVr5q",
     },
     {
         _id: "bJ6LtwQF89Xp",
@@ -63,7 +63,6 @@ export default [
         description: "A Very Quiz B Description Here",
         course: "RS103",
         quizType: quizType.EXAMS,
-        points: 100,
         quizGroup: quizGroup.EXAMS,
         shuffleAnswers: true,
         timeLimitMin: 60,
@@ -77,6 +76,7 @@ export default [
         availableDate: "2024-05-15T00:00",
         closeDate: "2025-05-16T23:59", // until date equivalent
         published: true,
+        questionsID: "BmcY6WTnVr5q",
     },
     {
         _id: "K2mYVz7XN34P",
@@ -84,7 +84,6 @@ export default [
         description: "A Very C Description Here",
         course: "RS101",
         quizType: quizType.GRADEDSURVEY,
-        points: 50,
         quizGroup: quizGroup.QUIZZES,
         shuffleAnswers: true,
         timeLimitMin: 60,
@@ -98,6 +97,7 @@ export default [
         availableDate: "2024-05-15T00:00",
         closeDate: "2025-05-16T23:59", // until date equivalent
         published: true,
+        questionsID: "BmcY6WTnVr5q",
     },
     {
         _id: "LW9Xp6KJ7YQF",
@@ -105,7 +105,6 @@ export default [
         description: "A Very D Description Here",
         course: "RS102",
         quizType: quizType.GRADED,
-        points: 100,
         quizGroup: quizGroup.QUIZZES,
         shuffleAnswers: false,
         timeLimitMin: 20,
@@ -119,5 +118,6 @@ export default [
         availableDate: "2024-05-15T00:00",
         closeDate: "2025-05-16T23:59", // until date equivalent
         published: false,
+        questionsID: "BmcY6WTnVr5q",
     },
 ]

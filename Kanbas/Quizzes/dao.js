@@ -66,7 +66,7 @@ export const deleteQuiz = async (quizID) => {
 };
 
 // Update an existing quiz by its ID
-export const updateAssignment = async (quizID, quizUpdates) => {
+export const updateQuiz = async (quizID, quizUpdates) => {
     try {
         const index = quizzes.findIndex((quiz) => quiz._id === quizID);
         if (index !== -1) {
@@ -79,6 +79,16 @@ export const updateAssignment = async (quizID, quizUpdates) => {
     } catch (error) {
         console.error("Error updating quiz:", error);
         return 500;
+    }
+};
+
+// Get the Questions from a Quiz
+export const getQuizQuestions = async (quizID) => {
+    try {
+        const quiz = quizzes.find((quiz) => quiz._id === quizID);
+        
+    } catch (err) {
+
     }
 };
 
