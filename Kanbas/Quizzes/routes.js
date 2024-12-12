@@ -49,7 +49,7 @@ export default function QuizzesRoutes(app) {
     // ========================================================================
 
     // get the questions from a quiz
-    app.get("/api/quizzes/questions/:quizID", async (req, res) => {
+    app.get("/api/quizzes/:quizID/questions", async (req, res) => {
         const { quizID } = req.params;
         const questions = await dao.getQuizQuestions(quizID)
         res.json(questions)
