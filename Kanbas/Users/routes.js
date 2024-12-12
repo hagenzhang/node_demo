@@ -5,8 +5,18 @@ import * as enrollmentsDao from "../Enrollments/dao.js";
 export default function UserRoutes(app) {
     const createUser = (req, res) => { };
     const deleteUser = (req, res) => { };
-    const findAllUsers = (req, res) => { };
-    const findUserById = (req, res) => { };
+    const findAllUsers = (req, res) => { 
+        const allUsers = dao.findAllUsers()
+        res.json(allUsers);
+    };
+    app.get("/api/users", findAllUsers);
+
+    const findUserById = (req, res) => {
+        const { userID } = req.params
+        const user = dao.findUserById(userID)
+        res.json(user)
+    };
+    app.get("/api/users/:userId", findUserById);
 
     const updateUser = (req, res) => {
         const userId = req.params.userId;
@@ -72,8 +82,6 @@ export default function UserRoutes(app) {
     };
 
     app.post("/api/users", createUser);
-    app.get("/api/users", findAllUsers);
-    app.get("/api/users/:userId", findUserById);
     app.put("/api/users/:userId", updateUser);
     app.delete("/api/users/:userId", deleteUser);
     app.post("/api/users/signup", signup);
