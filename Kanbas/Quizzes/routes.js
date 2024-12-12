@@ -61,10 +61,7 @@ export default function QuizzesRoutes(app) {
     app.post("/api/quizzes/:quizID/questions"), async (req, res) => {
         const { quizID } = req.params;
         const questions = { ...req.body, _id: nanoid() };
-
         const status = await dao.assignQuizQuestions(quizID, questions);
         res.sendStatus(status);
     }
-
-
 }
