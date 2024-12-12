@@ -127,16 +127,16 @@ function questionsValidation(questionList) {
 export const getQuizQuestions = async (quizID) => {
     try {
         const quiz = quizzes.find((quiz) => quiz._id === quizID);
-        const questions = questions.find((q) => q._id === quiz.questionsID)
+        const quizQs = questions.find((q) => q._id === quiz.questionsID)
 
-        if (questions) {
-            return questions
+        if (quizQs) {
+            return quizQs
         } else {
             console.log(`No quiz questions found for QuizID ${quizID}`)
             return {};
         }
     } catch (err) {
-        console.error("Error retrieving quiz questions:", error);
+        console.error("Error retrieving quiz questions:", err);
         return {};
     }
 };
